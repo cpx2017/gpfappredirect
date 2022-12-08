@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script type="text/javascript">
+            window.onload = function() {
+                // Deep link to your app goes here
+                
+                window.location = "gpf://home";
+
+                //document.getElementById("l").src = "fb://profile/33138223345";
+
+                setTimeout(function() {
+                    // Link to the App Store should go here -- only fires if deep link fails                
+                    window.location = "https://bit.ly/2WsOKgQ";
+                }, 5000);
+            };
+        </script>
+    </body>
+</html>
