@@ -3,26 +3,16 @@
     <body>
         <script type="text/javascript">
             window.onload = function() {
-                // Deep link to your app goes here
-
-
-                var deeplinkUrl = `gpf://home`;
-                //variable will check app installed or not
-                var change = false;
-                setTimeout(() => {
-                if (!change) {
-                    var redirectUrl = "https://bit.ly/2WsOKgQ";
-                    window.location = redirectUrl;
-                }
-                }, 3000);
-                window.location = deeplinkUrl;
-                //handle event to check app installed or not
-                window.onblur = function () {
-                    change = true;
-                };
-                window.onfocus = function(){
-                    change = false;
-                }
+                var fallbackToStore = function() {
+                    window.location.replace('https://bit.ly/2WsOKgQ');
+                    };
+                    var openApp = function() {
+                    window.location.replace('gpf://home');
+                    };
+                    var triggerAppOpen = function() {
+                    openApp();
+                    setTimeout(fallbackToStore, 700);
+                    };
             };
         </script>
     </body>
