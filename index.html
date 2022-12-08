@@ -7,8 +7,7 @@
                 // Deep link to your app goes here
                 var ua = navigator.userAgent.toLowerCase();
                 var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
-                var isSamsungBrowser = navigator.userAgent.match(/SamsungBrowser/i)
-                if(isAndroid || isSamsungBrowser) {
+                if(isAndroid) {
                     window.location = "gpf://home";
 
 
