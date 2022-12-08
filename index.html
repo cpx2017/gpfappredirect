@@ -8,13 +8,12 @@
                 var ua = navigator.userAgent.toLowerCase();
                 var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
                 if(isAndroid) {
-                    alert()
-                    window.location.href = "gpf://home";
+                    top.location.href = "gpf://home";
 
 
                     setTimeout(function() {
                         // Link to the App Store should go here -- only fires if deep link fails                
-                        window.location.href = "https://bit.ly/2WsOKgQ";
+                        top.location.href = "https://bit.ly/2WsOKgQ";
                     }, 2000);
                 }
             };
