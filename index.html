@@ -5,14 +5,17 @@
         <script type="text/javascript">
             window.onload = function() {
                 // Deep link to your app goes here
-                
-                // window.location = "gpf://home";
+                var ua = navigator.userAgent.toLowerCase();
+                var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+                if(isAndroid) {
+                    window.location = "gpf://home";
 
 
-                // setTimeout(function() {
-                //     // Link to the App Store should go here -- only fires if deep link fails                
-                //     window.location = "https://bit.ly/2WsOKgQ";
-                // }, 5000);
+                    setTimeout(function() {
+                        // Link to the App Store should go here -- only fires if deep link fails                
+                        window.location = "https://bit.ly/2WsOKgQ";
+                    }, 5000);
+                }
             };
         </script>
     </body>
